@@ -30,7 +30,7 @@ function ItemDisplay() {
             {
               itemData.map((data, index) => (
                 <ListGroup>
-                  <ListGroup.Item key={index} eventKey={data.title}  active={selectedItem.title === data.title} variant={getVariant(data.dueDate)} onClick={() => setSelectedItem(data)}>{data.title}</ListGroup.Item>
+                  <ListGroup.Item key={index} eventKey={data.title} variant={getVariant(data.dueDate)} onClick={() => setSelectedItem(data)}>{data.title}</ListGroup.Item>
                 </ListGroup>
               ))
             }
@@ -40,7 +40,7 @@ function ItemDisplay() {
           <Tab.Content>
             <Tab.Pane eventKey={selectedItem.title}>
               <p contentEditable>{selectedItem.description}</p>
-              <p><input type="date" value={selectedItem.dueDate} contentEditable /></p>
+              <p><input type="date" value={selectedItem.dueDate} /></p>
             </Tab.Pane>
           </Tab.Content>
         </Col>
